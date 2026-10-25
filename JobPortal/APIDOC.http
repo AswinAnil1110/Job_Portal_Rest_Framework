@@ -1,0 +1,88 @@
+#API for JobView
+###
+GET http://127.0.0.1:8000/jobs/
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/jobs/
+Content-Type: application/json
+
+{
+    "company_name": "Infosys",
+    "location": "Thrissur",
+    "title": "Django Developer",
+    "job_type": "full_time",
+    "experience_level": "experienced",
+    "salary": 600000,
+    "department": "Software Development"
+}
+
+#API for JobRetriveUpdateDelete
+###
+GET http://127.0.0.1:8000/jobs/1/
+Accept: application/json
+
+###
+PUT http://127.0.0.1:8000/jobs/2/
+Content-Type: application/json
+
+{
+    "company_name": "Infosys",
+    "location": "Calicut",
+    "title": "Django Developer",
+    "job_type": "full_time",
+    "experience_level": "experienced",
+    "salary": 600000,
+    "department": "Software Development"
+}
+
+###
+DELETE http://127.0.0.1:8000/jobs/2/
+Content-Type: application/json
+
+#API for ApplicationView
+###
+GET http://127.0.0.1:8000/applications/
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/applications/
+Content-Type: application/json
+
+{
+    "applicant_name": "Aljin",
+    "applicant_email": "Aljin@gmail.com",
+    "job": 3,
+    "qualification": "BCA",
+    "experience_years": 1
+}
+
+#API for ApplicationRetriveUpdateDelete
+###
+GET http://127.0.0.1:8000/applications/1/
+Accept: application/json
+
+###
+PUT http://127.0.0.1:8000/applications/1/
+Content-Type: application/json
+
+{
+    "applicant_name": "Hari",
+    "applicant_email": "hari@gmail.com",
+    "job": 1,
+    "qualification": "MCA",
+    "experience_years": 3
+}
+
+###
+DELETE http://127.0.0.1:8000/applications/2/
+Content-Type: application/json
+
+#API for EvaluateApplicationView
+###
+PUT http://127.0.0.1:8000/applications/1/evaluate/
+Content-Type: application/json
+
+{
+    "status" : "selected"
+}
